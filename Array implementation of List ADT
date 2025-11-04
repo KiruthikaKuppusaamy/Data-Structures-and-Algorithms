@@ -1,0 +1,46 @@
+// Array implementation of List ADT
+
+#include<stdio.h>
+int main()
+{
+    int choice,list[30],value,size=0;
+    printf("Array implementation of List ADT\n");
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+    while(1)
+    {
+    printf("\n1.Insert ");
+    printf("\n2.Delete ");
+    printf("\n3.Display ");
+    printf("\n4.Exit ");
+    
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+    switch(choice)
+    {
+        case 1:
+           printf("Enter element to insert ");
+           scanf("%d",&value);
+           list[size]=value;
+           size++;
+           printf("Element %d is inserted",value);
+           break;
+         
+        case 2:
+           printf("Element %d deleted", list[size - 1]);
+           size--;    
+           break;
+           
+        case 3:
+           printf("\nElements in the list are ");
+           for(int i=0;i<=size-1;i++)
+           {
+               printf("%d ",list[i]);
+           }
+           break;
+           
+        case 4:
+           return 0;
+           break;
+    }
+    }
+}
